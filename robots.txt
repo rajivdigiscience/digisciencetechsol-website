@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://digisciencetechsol.com/sitemap.xml
