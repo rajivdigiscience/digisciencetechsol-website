@@ -60,7 +60,7 @@ a {
   margin: 0 0 14px;
   font-size: clamp(2rem, 4vw, 3.25rem);
   line-height: 1.08;
-  letter-spacing: -0.04em;
+  letter-spacing: 0;
 }
 
 .section-title.smaller {
@@ -251,7 +251,7 @@ a {
   margin: 0 0 18px;
   font-size: clamp(2.8rem, 6vw, 5.25rem);
   line-height: 0.98;
-  letter-spacing: -0.06em;
+  letter-spacing: 0;
   max-width: 760px;
 }
 
