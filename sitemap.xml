@@ -13,6 +13,24 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://digisciencetechsol.com/services.html</loc>
+    <lastmod>2026-04-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://digisciencetechsol.com/pricing.html</loc>
+    <lastmod>2026-04-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://digisciencetechsol.com/portfolio.html</loc>
+    <lastmod>2026-04-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://digisciencetechsol.com/trust-assets.html</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
