@@ -106,17 +106,21 @@ if (contactForm && formNote) {
       return;
     }
 
-    if (!appConfig.googleScriptUrl || appConfig.googleScriptUrl.includes('PASTE_YOUR')) {
+    const leadEndpointUrl = appConfig.leadEndpointUrl || appConfig.googleScriptUrl || '';
+
+    if (!leadEndpointUrl || leadEndpointUrl.includes('PASTE_YOUR')) {
       showFormNote('The enquiry service is temporarily unavailable. Please try again shortly or email <a href="mailto:rajiv.gupta@digisciencetechsol.com">rajiv.gupta@digisciencetechsol.com</a> directly.');
       return;
     }
 
-    if (appConfig.googleScriptUrl.includes('/macros/library/')) {
+    if (leadEndpointUrl.includes('/macros/library/')) {
       showFormNote('The enquiry service is temporarily unavailable. Please try again shortly or email <a href="mailto:rajiv.gupta@digisciencetechsol.com">rajiv.gupta@digisciencetechsol.com</a> directly.');
       return;
     }
 
-    if (!/script\.google\.com\/macros\/s\/.+\/exec/.test(appConfig.googleScriptUrl)) {
+    const isGoogleScriptEndpoint = /script\.google\.com\/macros\/s\/.+\/exec/.test(leadEndpointUrl);
+    const isDigiscienceLeadEndpoint = /n8n\.digisciencetechsol\.com\/webhook\/digiscience-lead-/.test(leadEndpointUrl);
+    if (!isGoogleScriptEndpoint && !isDigiscienceLeadEndpoint) {
       showFormNote('The enquiry service is temporarily unavailable. Please try again shortly or email <a href="mailto:rajiv.gupta@digisciencetechsol.com">rajiv.gupta@digisciencetechsol.com</a> directly.');
       return;
     }
@@ -126,7 +130,7 @@ if (contactForm && formNote) {
       showFormNote('Submitting your enquiry securely. Please wait...');
 
       const body = new URLSearchParams(payload);
-      await fetch(appConfig.googleScriptUrl, {
+      await fetch(leadEndpointUrl, {
         method: 'POST',
         mode: 'no-cors',
         headers: {

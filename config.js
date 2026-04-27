@@ -1,6 +1,4 @@
 window.DIGISCIENCE_CONFIG = {
-  // Paste the Apps Script Web App URL here.
-  // Correct format example: https://script.google.com/macros/s/DEPLOYMENT_ID/exec
-  // Do NOT use the /macros/library/ URL.
-  googleScriptUrl: 'https://script.google.com/macros/s/AKfycbwOdj38ag_GioW4cxF1vke5OisdLmNvqtcFVcdh3oQ9sXdnFsOSkccrId_r0b7OSdzY/exec'
+  // Public website lead intake is handled by the Digiscience VPS/n8n control plane.
+  leadEndpointUrl: 'https://n8n.digisciencetechsol.com/webhook/digiscience-lead-070d9d6e0978f46f827dd0a621510ae045a437b66defd3ff'
 };
